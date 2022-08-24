@@ -11,27 +11,18 @@ public class App {
     Locale.setDefault(Locale.US);
 
     Scanner entDados = new Scanner(System.in);
-    //Expressão condicional ternária
-    // Sintax 
-    // ( condição) ? valor_se_verdadeiro : valor_se_falso
+    // Laço de repetição while
+    System.out.print("Em qual numero estou pensando? ");
+    int numero = entDados.nextInt();
+    int soma = 0;
 
-
-    //Exempo de if sem condição ternaria
-    System.out.println("Exemplo de if sem condição ternária");
-    double preco = 34.5;
-    double desconto;
-
-    if(preco < 20.0){
-        desconto = preco * 0.01;
-    }else{
-        desconto = preco * 0.05;
+    while (numero != 20) {
+        soma += numero;
+        System.out.print("Não é esse o número, digite um novo numero: ");
+        numero = entDados.nextInt();
     }
-    System.out.println(desconto);
-    System.out.println();
-
-    //fazendo a condição acima utiliznado a condição ternária
-    System.out.println("Resultado utilizando a condição ternária");
-    System.out.println((preco < 20.0) ? preco * 0.1 : preco * 0.05);
+    System.out.println("Essa é a soma dos números digitados. " + soma);
+    System.out.println("Esse é o número que eu estava pensando 20");
  
     entDados.close();
     }
