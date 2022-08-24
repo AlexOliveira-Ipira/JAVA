@@ -1,4 +1,3 @@
-import java.util.Locale;
 import java.util.Scanner;
 
 public class App {
@@ -8,32 +7,64 @@ public class App {
      */
     public static void main(String[] args) throws Exception {
     System.out.println();
-    // Funções matematicas com java
-    double x = 3.0;
-    double y = 4.0;
-    double z = -5.0;
-    double A, B, C;
+  
+    // Expressões condicional simples 
+    // Neste exemplo o if é verdadeiro com isso imprime as 3 informações
+     
+    int hora = 5;
 
-    //Raiz quadrada de um número.
-    A = Math.sqrt(x);
-    B = Math.sqrt(y);
-    C = Math.sqrt(25.0);
-    System.out.println("Raiz quadada de " + x + " = " + A);
-    System.out.println("Raiz quadada de " + y + " = " + B);
-    System.out.println("Raiz quadada de 25 = " + C);
+    System.out.println("Exemplo de if simples com valor verdadeiro");
+    System.out.println("Bom dia");
 
-    // Potenciação
-    A = Math.pow(x, y);
-    B = Math.pow(x, 2.0);
-    C = Math.pow(5.0, 2.0);
-    System.out.println(x + " elevado a " + y + " = " + A);
-    System.out.println(x + " elevado ao quadrado = " + B);
-    System.out.println("5 elevado ao quadrado = " + C);
+    if(hora > 0){
+        System.out.println("Boa tarde");
+    }
+    System.out.println("Boa noite");
+    System.out.println();
 
-    //Valor absoluto
-    A = Math.abs(y);
-    B = Math.abs(z);
-    System.out.println("Valor absoluto de " + y + " = " + A);
-    System.out.println("Valor absoluto de " + z + " = " + B);
+
+    // Expressôes condiciona simples
+    // Neste exemplo o if é falso com isso imprime so os 2 itens que estão fora do if
+
+    System.out.println("Exemplo de if simples com valor falso");
+    System.out.println("Bom dia");
+    
+    if(hora < 0){
+        System.out.println("Boa tarde");
+        System.out.println();
+    }
+
+    System.out.println("Boa noite");
+    System.out.println();
+
+    //Exemplo de if composto
+    Scanner entDados = new Scanner(System.in);
+    int horas;
+    System.out.print("Quantas horas? ");
+    horas = entDados.nextInt();
+
+    if(horas < 12){
+        System.out.println("Bom dia");
+        System.out.println();
+    }else{
+        System.out.println("Boa tarde");
+        System.out.println();
+    }
+
+    //Exemplo de encadeamento de estruturas condicionais
+    System.out.println("Hora encadeamento:");
+    System.out.print("Quantas horas? ");
+    horas = entDados.nextInt();
+
+    if(horas <12){
+        System.out.println("Bom dia");
+    }
+    else if(horas < 18){
+        System.out.println("Boa tarde");
+    }
+    else{
+        System.out.println("Boa noite");
+    }
+    entDados.close();
     }
 }
