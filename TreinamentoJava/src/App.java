@@ -1,3 +1,4 @@
+import java.util.Locale;
 import java.util.Scanner;
 
 public class App {
@@ -7,64 +8,29 @@ public class App {
      */
     public static void main(String[] args) throws Exception {
     System.out.println();
-  
-    // Expressões condicional simples 
-    // Neste exemplo o if é verdadeiro com isso imprime as 3 informações
-     
-    int hora = 5;
-
-    System.out.println("Exemplo de if simples com valor verdadeiro");
-    System.out.println("Bom dia");
-
-    if(hora > 0){
-        System.out.println("Boa tarde");
-    }
-    System.out.println("Boa noite");
-    System.out.println();
-
-
-    // Expressôes condiciona simples
-    // Neste exemplo o if é falso com isso imprime so os 2 itens que estão fora do if
-
-    System.out.println("Exemplo de if simples com valor falso");
-    System.out.println("Bom dia");
-    
-    if(hora < 0){
-        System.out.println("Boa tarde");
-        System.out.println();
-    }
-
-    System.out.println("Boa noite");
-    System.out.println();
-
-    //Exemplo de if composto
+    Locale.setDefault(Locale.US);
+    //Sintaxe opcional - operadores de atribuição cumulativa
+    /*
+     * a == b; == a = a + b
+     * a -= b; == a = a - b;
+     * a *= b; == a = a * b;
+     * a /= b; == a = a / b;
+     * a %= b; == a = a % b;
+     * 
+     */
     Scanner entDados = new Scanner(System.in);
-    int horas;
-    System.out.print("Quantas horas? ");
-    horas = entDados.nextInt();
+        
+    System.out.print("Digite o valor do consumo em minutos: ");
+    int minutos = entDados.nextInt();
 
-    if(horas < 12){
-        System.out.println("Bom dia");
-        System.out.println();
-    }else{
-        System.out.println("Boa tarde");
-        System.out.println();
+    double conta = 50.0;
+
+    if(minutos > 100){
+        // Usando operador de atribuição cumulativa
+        conta += (minutos - 100) * 2.0;
     }
 
-    //Exemplo de encadeamento de estruturas condicionais
-    System.out.println("Hora encadeamento:");
-    System.out.print("Quantas horas? ");
-    horas = entDados.nextInt();
-
-    if(horas <12){
-        System.out.println("Bom dia");
-    }
-    else if(horas < 18){
-        System.out.println("Boa tarde");
-    }
-    else{
-        System.out.println("Boa noite");
-    }
+    System.out.printf("Valor da conta = R$ %.2f%n" , conta);
     entDados.close();
     }
 }
