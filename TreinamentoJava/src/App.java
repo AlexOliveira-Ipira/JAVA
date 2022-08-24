@@ -11,41 +11,28 @@ public class App {
     Locale.setDefault(Locale.US);
 
     Scanner entDados = new Scanner(System.in);
+    //Expressão condicional ternária
+    // Sintax 
+    // ( condição) ? valor_se_verdadeiro : valor_se_falso
 
-    int dia;
-    String diaSemana;
-    System.out.print("Digite um valor de 1 a 7 para o dia da semana: ");
-    dia = entDados.nextInt();
 
-    switch(dia){
-        case 1:
-            diaSemana = "Domingo";
-            break;
-        case 2:
-            diaSemana = "Segunda";
-            break;
-        case 3:
-            diaSemana = "Terça";
-            break;
-        case 4:
-            diaSemana = "Quarta";
-            break;
-        case 5:
-            diaSemana = "Quinta";
-            break;
-        case 6:
-            diaSemana = "Sexta";
-            break;
-        case 7:
-            diaSemana = "Sabado";
-            break;
-        default:
-            diaSemana = "Valor invalido";
-            break;
+    //Exempo de if sem condição ternaria
+    System.out.println("Exemplo de if sem condição ternária");
+    double preco = 34.5;
+    double desconto;
+
+    if(preco < 20.0){
+        desconto = preco * 0.01;
+    }else{
+        desconto = preco * 0.05;
     }
+    System.out.println(desconto);
+    System.out.println();
 
-    System.out.println("Dia da semana: " + diaSemana);
-
+    //fazendo a condição acima utiliznado a condição ternária
+    System.out.println("Resultado utilizando a condição ternária");
+    System.out.println((preco < 20.0) ? preco * 0.1 : preco * 0.05);
+ 
     entDados.close();
     }
 }
