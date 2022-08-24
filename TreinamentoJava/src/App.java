@@ -11,18 +11,19 @@ public class App {
     Locale.setDefault(Locale.US);
 
     Scanner entDados = new Scanner(System.in);
-    // Estrutura de repetição FOR
-    System.out.print("Digite um número: ");
-    int numero = entDados.nextInt();
-    int soma = 0;
+    //Estrutura repetitiva "Faça-enquanto" - Do while
+    char resp;
 
-    for (int i=0 ; i < numero; i++){
-        System.out.print("Digite um numeor para acrescentar na soma: ");
-        int x = entDados.nextInt();
-        soma += x;
-    }
+    do{
+        System.out.print("Digite a temperatura em Celsius: ");
+        double C = entDados.nextDouble();
+        double F = 9.0 * C / 5.0 + 32;
+        System.out.printf("Equivalente em Fahrenheit: %.1f%n", F);
+        System.out.print("Deseja repetir (s/n)? ");
+        resp = entDados.next().charAt(0);
+    }while(resp != 'n');
 
-    System.out.println("A soma dos números é: " + soma);
+    System.out.println("Fim!");
  
     entDados.close();
     }
