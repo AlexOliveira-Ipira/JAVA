@@ -9,28 +9,43 @@ public class App {
     public static void main(String[] args) throws Exception {
     System.out.println();
     Locale.setDefault(Locale.US);
-    //Sintaxe opcional - operadores de atribuição cumulativa
-    /*
-     * a == b; == a = a + b
-     * a -= b; == a = a - b;
-     * a *= b; == a = a * b;
-     * a /= b; == a = a / b;
-     * a %= b; == a = a % b;
-     * 
-     */
+
     Scanner entDados = new Scanner(System.in);
-        
-    System.out.print("Digite o valor do consumo em minutos: ");
-    int minutos = entDados.nextInt();
 
-    double conta = 50.0;
+    int dia;
+    String diaSemana;
+    System.out.print("Digite um valor de 1 a 7 para o dia da semana: ");
+    dia = entDados.nextInt();
 
-    if(minutos > 100){
-        // Usando operador de atribuição cumulativa
-        conta += (minutos - 100) * 2.0;
+    switch(dia){
+        case 1:
+            diaSemana = "Domingo";
+            break;
+        case 2:
+            diaSemana = "Segunda";
+            break;
+        case 3:
+            diaSemana = "Terça";
+            break;
+        case 4:
+            diaSemana = "Quarta";
+            break;
+        case 5:
+            diaSemana = "Quinta";
+            break;
+        case 6:
+            diaSemana = "Sexta";
+            break;
+        case 7:
+            diaSemana = "Sabado";
+            break;
+        default:
+            diaSemana = "Valor invalido";
+            break;
     }
 
-    System.out.printf("Valor da conta = R$ %.2f%n" , conta);
+    System.out.println("Dia da semana: " + diaSemana);
+
     entDados.close();
     }
 }
