@@ -11,18 +11,18 @@ public class App {
     Locale.setDefault(Locale.US);
 
     Scanner entDados = new Scanner(System.in);
-    // Laço de repetição while
-    System.out.print("Em qual numero estou pensando? ");
+    // Estrutura de repetição FOR
+    System.out.print("Digite um número: ");
     int numero = entDados.nextInt();
     int soma = 0;
 
-    while (numero != 20) {
-        soma += numero;
-        System.out.print("Não é esse o número, digite um novo numero: ");
-        numero = entDados.nextInt();
+    for (int i=0 ; i < numero; i++){
+        System.out.print("Digite um numeor para acrescentar na soma: ");
+        int x = entDados.nextInt();
+        soma += x;
     }
-    System.out.println("Essa é a soma dos números digitados. " + soma);
-    System.out.println("Esse é o número que eu estava pensando 20");
+
+    System.out.println("A soma dos números é: " + soma);
  
     entDados.close();
     }
