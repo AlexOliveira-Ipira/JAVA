@@ -2,43 +2,36 @@ import java.util.Locale;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        //Define a localização do programa, 
+        // Enunciado exercício de fixação.
+        /*Em um novo progrma, inicie as seguintes variáveis */
+        String product1 = "Computer";
+        String product2 = "Office desk";
+
+        int age = 30;
+        int code = 5290;
+        char gender = 'F';
+
+        double price1 = 2100.0;
+        double price2 = 650.50;
+        double measure = 53.234567;
+
+        /*Em seguida, usando os valores das variávies, prodza a
+         * seguinte saída na tela do console:
+         */
+
+        System.out.println();
+        System.out.println("Products:");
+        System.out.printf("%s, which price is $ %.2f%n", product1, price1);
+        System.out.printf("%s, which price is $ %.2f%n", product2, price2);
+        System.out.println();
+        System.out.printf("Record: %d years old, code %d and gender: %s%n", age, code, gender);
+        System.out.println();
+        System.out.printf("Measue with eight decimal places: " + "%.8f%n", measure);
+        System.out.printf("Rouded (three decimal places):" + "%.3f%n" ,measure);
+
+         //Define a localização do programa, 
         //colocando o ponto no lugar da virgula. 
         Locale.setDefault(Locale.US);
-
-        // Printls - Utiliza essa função para pular uma linha.
-        int a = 22;
-        System.out.println("Olá mundo!");
-        System.out.println(a);
-        System.out.println();
-
-        // Print- Utiliza essa função para imprimir na mesma linha.
-        System.out.print("Olá mundo!");
-        System.out.println(a);
-        System.out.println();
-     
-    
-        // Saida de dados com ponto flutuante
-        double x = 10.35784;
-        System.out.println("Valor da variavel " + x);
-
-        // System.out.printf -  Utilizado para criar mascaras em double
-        System.out.printf( "Valor com 2 casas decimais " + "%.2f%n", x);
-        System.out.printf( "Valor com 4 casas decimais " + "%.4f%n", x);
-
-        //Concatenar vários elementos em um mesmo comando de escrita
-        //Definindo variáveis
-        String nome = "Maria";
-        int idade  = 31;
-        double renda = 4000.0;
-        //Saída do comando
-        //Marcadores:
-            //%f = ponto flutuante
-            //%d = inteiro
-            //%s = texto
-            //%n = quebra de linha
-        System.out.println();
-        System.out.printf("%s tem %d anos e ganha R$ %.2f reais%n", nome, idade, renda);
-
+        System.out.printf("US decimal point: " + "%.3f%n" , measure);
     }
 }
