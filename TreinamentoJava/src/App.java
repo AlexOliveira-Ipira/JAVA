@@ -17,35 +17,55 @@ public class App {
 
     Scanner entDados = new Scanner(System.in);
     
-    // digitando String
-    String nome;
-    System.out.print("Digite seu nome: ");
-    nome = entDados.next();
+    // Entrada de dados até a quebra de linha
+    String s1, s2, s3;
 
-    // Digitando Inteiro
-    int idade;
+    System.out.print("Primeir linha: ");
+    s1 = entDados.nextLine();
+    System.out.print("Segunda linha: ");
+    s2 = entDados.nextLine();
+    System.out.print("Terceira linha; ");
+    s3 = entDados.nextLine();
 
-    System.out.print("Digite sua idade: ");
-    idade = entDados.nextInt();
+    System.out.println("Dados digitados: ");
+    System.out.println(s1);
+    System.out.println(s2);
+    System.out.println(s3);
+    System.out.println();
 
+    //Resolvendo quebra de linha pendente
+    //Gerando o erro.
+    int x;
+    String q1, q2, q3;
 
-    // Digitar número com ponto flutuante
-    
+    System.out.println("Esperando digitar um valor numerico e 3 pequenos textos.");
+    x = entDados.nextInt();
+    q1 = entDados.nextLine();
+    q2 = entDados.nextLine();
+    q3 = entDados.nextLine();
 
-    double altura;
+    System.out.println("Dados digitados:");
+    System.out.println(x);
+    System.out.println(q1);
+    System.out.println(q2);
+    System.out.println(q3);
+    System.out.println();
 
-    System.out.print("Digite a sua altura: ");
-    altura = entDados.nextDouble();
+    // Resolvendo o erro acima
+    System.out.println("Resolvendo o erro acima.");
+    System.out.println("Esperando digitar um valor numerico e 3 pequenos textos.");
+    x = entDados.nextInt();
+    entDados.nextLine();
+    q1 = entDados.nextLine();
+    q2 = entDados.nextLine();
+    q3 = entDados.nextLine();
+    System.out.println();
 
-
-    System.out.printf("Seu nome é %s  a sua idade é %d e a sua altura é %.2f.%n" ,nome, idade, altura);
-   
-    // Pegando o primeiro caracter de uma palavra digitada
-    char primeiraLetra;
-    System.out.println("Digite uma palavra.");
-    primeiraLetra = entDados.next().charAt(0);
-    System.out.println("A primeira letra dessa palavra é: " +  primeiraLetra);
-    
+    System.out.println("Dados digitados após a correção:");
+    System.out.println(x);
+    System.out.println(q1);
+    System.out.println(q2);
+    System.out.println(q3);
 
     entDados.close();
     }
