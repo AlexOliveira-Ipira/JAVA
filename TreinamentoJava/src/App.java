@@ -1,5 +1,4 @@
-import java.util.Locale;
-import java.util.Scanner;
+import java.lang.invoke.StringConcatFactory;
 
 public class App {
     /**
@@ -8,23 +7,44 @@ public class App {
      */
     public static void main(String[] args) throws Exception {
     System.out.println();
-    Locale.setDefault(Locale.US);
+  
+    //Funções para string
+    String original = "abcde FGHIJ ABC abc DEFG    ";
 
-    Scanner entDados = new Scanner(System.in);
-    //Estrutura repetitiva "Faça-enquanto" - Do while
-    char resp;
+    String s01 = original.toLowerCase();
+    String s02 = original.toUpperCase();
+    String s03 = original.trim();
+    String s04 = original.substring(2);
+    String s05 = original.substring(2, 9);
+    String s06 = original.replace('a', 'x');
+    String s07 = original.replace("abc", "xyz");
+    int i = original.indexOf("bc");
+    int j = original.lastIndexOf("bc");
 
-    do{
-        System.out.print("Digite a temperatura em Celsius: ");
-        double C = entDados.nextDouble();
-        double F = 9.0 * C / 5.0 + 32;
-        System.out.printf("Equivalente em Fahrenheit: %.1f%n", F);
-        System.out.print("Deseja repetir (s/n)? ");
-        resp = entDados.next().charAt(0);
-    }while(resp != 'n');
 
-    System.out.println("Fim!");
- 
-    entDados.close();
+    System.out.println("Original: -" + original + "-");
+    System.out.println("toLowerCase: -" + s01 + "-");
+    System.out.println("toUpperCase: -" + s02 + "-");
+    System.out.println("trim: -" + s03 + "-");
+    System.out.println("substring(2): -" + s04 + "-");
+    System.out.println("substring(2,9): -" + s05 + "-");
+    System.out.println("replace('a', 'x'): -" + s06 + "-") ;
+    System.out.println("replace('abc', 'xyz'): -" + s07 + "-");
+    System.out.println("Index of 'bc': " + i);
+    System.out.println("Last index of 'bc': " + j);
+
+    //Exemplo
+    //Operação split
+    String s = "potato apple lemon";
+
+    String[] vect = s.split(" ");
+   
+    System.out.println();
+    System.out.println("Scting original: " + s);
+    System.out.println();
+    System.out.println("Utilizando os vetores criado pelo split:");
+    System.out.println(vect[0]);
+    System.out.println(vect[1]);
+    System.out.println(vect[2]);
     }
 }
